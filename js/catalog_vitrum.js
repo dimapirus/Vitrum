@@ -209,3 +209,11 @@ titleElemFilter.onclick = function() {
     menuElemFilter.classList.toggle('open');
 };
 
+
+$( '.ctg_r_three > a' ).on( 'click', function ( e ) {
+    e.preventDefault();
+    $( '.ctg_r_three > a' ).removeClass( 'ctg_r_three_active' );
+    $( this ).addClass( 'ctg_r_three_active' );
+    $('.goods_main').hide();
+    $( $(this).data('open') ).show();
+} );
